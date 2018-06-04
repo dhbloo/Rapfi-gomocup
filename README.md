@@ -1,0 +1,1 @@
+Rapfi-gomocup
