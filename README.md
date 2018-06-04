@@ -4,7 +4,7 @@ Rapfi is a Gomoku (Five in a Row) engine designed for the [Gomocup AI Tournament
 
 As the code structure is not suitable for future development, this version of Rapfi will no longer be updated.
 
-###Overview
+### Overview
 
 + Rapfi is written in C++, based on the alpha-beta algorithm with some enhancements.
 
