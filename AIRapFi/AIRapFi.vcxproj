@@ -223,6 +223,7 @@
     <ClInclude Include="HashTable.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Config.cpp" />
     <ClCompile Include="Search.cpp" />
     <ClCompile Include="Evaluator.cpp" />
     <ClCompile Include="Board.cpp" />

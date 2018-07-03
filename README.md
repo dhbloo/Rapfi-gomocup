@@ -6,7 +6,7 @@ As the code structure is not suitable for future development, this version of Ra
 
 ### Overview
 
-+ Rapfi is written in C++, based on the alpha-beta algorithm with some enhancements.
++ Rapfi is written in C++, based on the alpha-beta algorithm with enhancements.
 
 + This version of Rapfi only supports freestyle rules.
 + It has a relative strong playing strength. It ranks **4st** in Gomocup 2018, with about 300 elo gap between the top.
@@ -18,3 +18,14 @@ As the code structure is not suitable for future development, this version of Ra
 
 
 
+### Modify config
+
+Rapfi has a built-in config, however, if you want to change the config, you need to re-generate a config file. Config file contains all the information needed, such as eval value, score value, pruning margin, etc. Since Rapfi has an enormous amount of evaluation values, it's nearly impossible for manual adjustment. But we can generate the full config file using a simplified eval file, which contains much less values.
+
+In order to generate a config file, compile "EvalGen" project, then use this command:
+
+```
+EvalGen.exe basicEval.txt config
+```
+
+`basicEval.txt` contains all the basic eval settings, with its meaning written in Chinese. Put `config` in the same dictionary with Rapfi, then Rapfi will automatically load it when started.

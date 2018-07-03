@@ -9,9 +9,6 @@ PatternCode Evaluator::PCODE[16][16][16][16];
 
 Pattern4 Evaluator::PATTERN4[3876];
 
-short Evaluator::Score[3876];
-short Evaluator::Value[3876];
-
 Evaluator::Evaluator(Board * board) : board(board) {
 	init();
 	newGame();

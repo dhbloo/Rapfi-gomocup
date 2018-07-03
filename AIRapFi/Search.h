@@ -92,7 +92,7 @@ private:
 	static const int MAX_PLY = 150;            // 引擎能计算的最大层数
 	static const int MAX_WINNING_CHECK_BRANCH = 50;  // 输的局面最多检查的分支
 
-	static const int EXTENSION_NUM_BASE = 16; // 延伸的基准数,越高延伸越多
+	static const int EXTENSION_NUM_BASE = 20;  // 延伸的基准数,越高延伸越多
 	float depthReductionBase = 1.f / logf((float)EXTENSION_NUM_BASE);
 
 	static const int IID_MIN_DEPTH = 8;
@@ -100,21 +100,17 @@ private:
 
 	static const int FUTILITY_MAX_DEPTH = 4;
 	int FutilityDepth = FUTILITY_MAX_DEPTH;
-	int FutilityMargin[4] = { 300, 300, 300, 300 };
+	int FutilityMargin[4] = { 100, 160, 200, 250 };
 
 	static const int RAZORING_MAX_DEPTH = 4;
 	int RazoringDepth = RAZORING_MAX_DEPTH;
-	int RazoringMargin[4] = { 300, 300, 300, 300 };
+	int RazoringMargin[4] = { 150, 200, 250, 300 };
 
-	float SEBetaMargin = 2.0f;
+	float SEBetaMargin = 3.0f;
 
 	// VCF 参数
 	static const int MAX_VCF_BRANCH = 10;
 	static const int MAX_VCF_PLY = 36;
-
-	// VCT 参数
-	static const int MAX_VCT_BRANCH = 10;
-	static const int MAX_VCT_PLY = 32;
 
 	// 连续棋的最大曼哈顿距离
 	static const int CONTINUES_NEIGHBOR = 2;       // 两着法(同线)最大距离
